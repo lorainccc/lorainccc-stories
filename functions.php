@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'lccc_framework_setup' ) ) :
+if ( ! function_exists( 'lorainccc-stories_setup' ) ) :
 	/**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,7 +20,7 @@ if ( ! function_exists( 'lccc_framework_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-	function lccc_framework_setup() {
+	function lorainccc_stories_setup() {
 
 		/*
 	 * Make theme available for translation.
@@ -70,20 +70,20 @@ if ( ! function_exists( 'lccc_framework_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'lccc_framework_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'lorainccc-stories_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 		) ) );
 }
-endif; // lccc_framework_setup
-add_action( 'after_setup_theme', 'lccc_framework_setup' );
+endif; // lorainccc-stories_setup
+add_action( 'after_setup_theme', 'lorainccc_stories_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function lccc_framework_widgets_init() {
+function lorainccc_stories_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'lccc-stories' ),
 		'id'            => 'sidebar-1',
@@ -94,23 +94,19 @@ function lccc_framework_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'lccc_framework_widgets_init' );
+add_action( 'widgets_init', 'lorainccc_stories_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function lccc_framework_scripts() {
+function lorainccc_stories_scripts() {
 
 	/* ----- Add Foundation Support ----- */
 	/* Add Foundation CSS */
 	
-	wp_enqueue_style( 'foundation-normalize', get_template_directory_uri() . '/foundation/css/normalize.css' );
-		wp_enqueue_style( 'foundation-app', get_template_directory_uri() . '/foundation/css/app.css' );
-	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/foundation/css/foundation.min.css' );
-	
 	/* Add Custom CSS */
 	
- 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
+ 	wp_enqueue_style( 'genericons', get_stylesheet_directory() . '/genericons/genericons.css', array(), '3.4.1' );
  
 	/* Add Foundation JS */
 	
@@ -120,39 +116,30 @@ function lccc_framework_scripts() {
 		wp_enqueue_script( 'foundation-whatinput', get_template_directory_uri() . '/foundation-643/js/vendor/what-input.js', array( 'jquery' ), '1', true);
 	/* Foundation Init JS */
 	
-	wp_enqueue_script( 'foundation-init-js', get_template_directory_uri() . '/foundation.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'foundation-init-js', get_stylesheet_directory() . '/foundation.js', array( 'jquery' ), '1', true );
 	
 		/* Foundation Icons */
 	if ( wp_style_is( 'foundation_font_icon_css', 'enqueued' ) ) {
 		return;
 	}else{
-			wp_enqueue_style('foundation_font_icon_css', get_template_directory_uri() . '/foundation-icons/foundation-icons.css');
+			wp_enqueue_style('foundation_font_icon_css', get_stylesheet_directory() . '/foundation-icons/foundation-icons.css');
 	}
 	/* ----- End Foundation Support ----- */
 		
-	wp_enqueue_style( 'lccc-stories-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'lccc-stories-style', get_stylesheet_directory() );
  
- wp_enqueue_style( 'lccc-print-stories-style', get_template_directory_uri() . '/print.css', array(), '', 'print' );
+ wp_enqueue_style( 'lccc-print-stories-style', get_stylesheet_directory() . '/print.css', array(), '', 'print' );
 	
-	wp_enqueue_script( 'lccc-stories-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true );
+	wp_enqueue_script( 'lccc-stories-navigation', get_stylesheet_directory() . '/js/navigation.js', array('jquery'), '20120206', true );
 
-	wp_enqueue_script( 'lccc-stories-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'lccc_framework_scripts' );
-
-function lorainccc_scripts() {
-
-	wp_enqueue_style( 'lorainccc-stories-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'lccc-stories-skip-link-focus-fix', get_stylesheet_directory() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'lorainccc_scripts' );
+add_action( 'wp_enqueue_scripts', 'lorainccc_stories_scripts' );
+
 /**
  * Implement the Custom Header feature.
  */
