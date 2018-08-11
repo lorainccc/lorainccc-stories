@@ -1,1 +1,2 @@
-# lorainccc-stories
+LCCC Stories Theme
+===
