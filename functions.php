@@ -122,11 +122,11 @@ function lorainccc_stories_scripts() {
 	if ( wp_style_is( 'foundation_font_icon_css', 'enqueued' ) ) {
 		return;
 	}else{
-			wp_enqueue_style('foundation_font_icon_css', get_stylesheet_directory() . '/foundation-icons/foundation-icons.css');
+			wp_enqueue_style('foundation_font_icon_css', get_template_directory_uri() . '/foundation-icons/foundation-icons.css');
 	}
 	/* ----- End Foundation Support ----- */
 		
-	wp_enqueue_style( 'lccc-stories-style', get_stylesheet_directory() );
+	wp_enqueue_style( 'lccc-stories-style', get_stylesheet_uri() );
  
  wp_enqueue_style( 'lccc-print-stories-style', get_stylesheet_directory_uri() . '/print.css', array(), '', 'print' );
 	
