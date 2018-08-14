@@ -3,7 +3,7 @@
 $term = get_queried_object();
 
 echo '<pre>';
-	print_r( get_fields($term->term_id) );
+	print_r( get_fields($term) );
 echo '</pre>';
 
 
