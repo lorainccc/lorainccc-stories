@@ -1,6 +1,8 @@
 <?php
 
-$term = get_queried_object();
+$term =  "category_".get_queried_object()->term_id;//get_query_var('cat');;
+
+echo $term;
 
 echo '<pre>';
 	print_r( get_fields() );
