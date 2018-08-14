@@ -2,6 +2,8 @@
 
 $term = get_queried_object();
 
+var_dump($term);
+
 $post_banner_background_type = get_field('cat_banner_background_type', $term);
 $post_banner_image = get_field('cat_banner_image', $term);
 $banner_vertical_positioning = get_field('cat_banner_vertical_positioning', $term);
