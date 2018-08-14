@@ -49,7 +49,7 @@ if( $headline_center || $headline_left || $headline_right ) :
 
 endif;
 
-if( $banner_type ) :
+if( $banner_image ) :
 
 ?>
 
