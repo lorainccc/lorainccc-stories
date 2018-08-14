@@ -1,14 +1,6 @@
 <?php
 
-$term =  "category_".get_queried_object()->term_id;//get_query_var('cat');;
-
-echo $term;
-
-echo '<pre>';
-	print_r( get_fields() );
-echo '</pre>';
-
-
+$term = get_queried_object();
 
 $post_banner_background_type = get_field('cat_banner_background_type', $term);
 $post_banner_image = get_field('cat_banner_image', $term);
