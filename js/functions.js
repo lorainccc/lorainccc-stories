@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
 	
 	var ppp = 9; // Post per page
-	//var cat = 8;
 	var pageNumber = 1;
 
 
