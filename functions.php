@@ -175,6 +175,8 @@ require get_template_directory() . '/inc/jetpack.php';
 */
 add_theme_support( 'post-thumbnails' );
 
+add_post_type_support( 'post, page', 'excerpt' );
+
 // Automatically make links clickable in the content editor.
 add_filter( 'the_content', 'make_clickable',      12 );
 
@@ -417,8 +419,6 @@ function enqueue_functions_js() {
 	endif;
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_functions_js' );
-
-
 
 // Show more posts with ajax
 function show_more_posts_ajax() {
