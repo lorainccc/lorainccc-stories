@@ -135,13 +135,11 @@ function lorainccc_stories_scripts() {
 	wp_enqueue_script( 'lccc-stories-skip-link-focus-fix', get_stylesheet_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 		//Adds Google Analytics, Google Tag, Hotjar and Eloqua to header
-	
 	wp_enqueue_script( 'lc-eloqua-scripts', get_stylesheet_directory_uri() . '/js/lc-eloqua.js', array(), '20180828', false);
 	wp_enqueue_script( 'lc-google-analytics-scripts', get_stylesheet_directory_uri() . '/js/lc-google-analytics.js', array(), '20180828', false);
 	wp_enqueue_script( 'lc-google-tag-scripts', get_stylesheet_directory_uri() . '/js/lc-google-tag.js', array(), '20180828', false);
 	wp_enqueue_script( 'lc-hotjar-scripts', get_stylesheet_directory_uri() . '/js/lc-hotjar.js', array(), '20180828', false);
 	wp_enqueue_script( 'lc-siteimprove-scripts', get_stylesheet_directory_uri() . '/js/lc-siteimprove.js', array(), '20180828', false);
-	
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -173,6 +171,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
 require get_template_directory() . '/inc/jetpack.php';
 */
+
+/* Adding Editor Style Support */
+
+add_editor_style( 'css/editor-style.css' );
+
 add_theme_support( 'post-thumbnails' );
 
 add_post_type_support( 'post, page', 'excerpt' );
@@ -420,11 +423,13 @@ function enqueue_functions_js() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_functions_js' );
 
+
+
 // Show more posts with ajax
 function show_more_posts_ajax() {
-	
-	
-	$posts_per_page = (isset($_POST["ppp"])) ? $_POST["ppp"] : 9;
+	//global $wp_query;
+	//global $post;
+	$posts_per_page = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
 	$page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
 	
 	header("Content-Type: text/html");
@@ -432,7 +437,7 @@ function show_more_posts_ajax() {
 	$args = array(
 		'suppress_filters' => true,
 		'post_type' => 'post',
-		'posts_per_page' => $post_per_page,
+		'posts_per_page' => $posts_per_page,
 		'paged' => $page,
 	);
 	

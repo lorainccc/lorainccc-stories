@@ -5,8 +5,8 @@ jQuery(document).ready(function($) {
 
 
 	function load_posts(){
-		pageNumber++;
 		
+		pageNumber++;
 
 		var str = '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=show_more';
 		$.ajax({
@@ -21,10 +21,11 @@ jQuery(document).ready(function($) {
 				
 				if($data.length){
 					
-					if( itemCount == ppp ) {
-						$("#more_posts").attr('disabled', false);
-					} else {
+					if( itemCount < ppp ) {
+						
 						$("#more_posts").hide();
+					} else {
+						$("#more_posts").attr('disabled', false);
 					}
 					
 				} else{
@@ -49,5 +50,7 @@ jQuery(document).ready(function($) {
 		$("#more_posts").attr("disabled",true); // Disable the button, temp.
 		load_posts();
 	});	
+	
+	
 	
 });
