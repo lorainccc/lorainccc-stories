@@ -14,12 +14,12 @@
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x align-middle">
 						<div class="medium-7 cell small-order-2 medium-order-1">
-							<a href="http://www.lorainccc.edu/" target="_blank"><img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/lccclogo_white.svg" alt="Lorian County Community College Logo" /></a>
+							<a href="https://www.lorainccc.edu/" target="_blank"><img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/lccclogo_white.svg" alt="Lorian County Community College Home" /></a>
 							<div class="links">
 								<span><a id="cat-link">Categories</a></span> | <span><a id="list-link">List View</a></span>
 							</div>
 							<div class="main-site-link">
-								<a href="http://www.lorainccc.edu/" target="_blank">www.lorainccc.edu</a>
+								<a href="https://www.lorainccc.edu/" target="_blank">www.lorainccc.edu</a>
 							</div>
 							<div class="copyright">
 								<span>Copyright Lorain County Community College <?php echo date('Y'); ?></span>

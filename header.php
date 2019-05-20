@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
+	<a class="show-on-focus hide-for-print" href="#content"><?php esc_html_e( 'Skip to content', 'lccc-framework' ); ?></a>
 	
 	<div class="off-canvas-wrapper">
 		
@@ -61,7 +61,7 @@
 				
 				<div class="auto cell text-center logo-cell">
 					
-					<a href="<?php echo home_url(); ?>"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LCCC-Stories-w-text-outlines.svg" alt="Lorian County Community College Logo" /></a>
+					<a href="<?php echo home_url(); ?>"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/LCCC-Stories-w-text-outlines.svg" alt="LCCC Stories Home" /></a>
 				
 				</div>
 				
