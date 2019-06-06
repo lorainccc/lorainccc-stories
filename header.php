@@ -27,7 +27,7 @@
 		
 		<?php get_template_part( 'template-parts/content', 'offcanvas' ); ?>
 		
-		<div class="off-canvas-content" data-off-canvas-content>
+		<div role="button" tabindex="0" class="off-canvas-content" data-off-canvas-content>
 			
 			<header id="masthead" class="header-bar grid-x grid-padding-x align-middle">
 				
@@ -49,7 +49,7 @@
 
 					-->
 					
-					<div class="hamburger menu-icon">
+					<div role="button" tabindex="0" class="hamburger menu-icon">
 						
 						<div class="top-bun"></div>
 						<div class="meat"></div>
@@ -65,7 +65,7 @@
 				
 				</div>
 				
-				<div class="shrink cell search-cell">
+				<div role="button" tabindex="0" class="shrink cell search-cell">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/search.svg" class="search-icon" alt="search LCCC Stories" height="27" width="33" />
 				</div>
 			
