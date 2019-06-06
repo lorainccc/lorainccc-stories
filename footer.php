@@ -28,7 +28,7 @@
 						<div class="medium-5 medium-offset-0 cell medium-order-2 small-order-1">
 							<form role="search" method="get" class="search-form" autocomplete="off" action="<?php echo home_url( '/' ); ?>">
 								<label>
-									<span class="screen-reader-text show-for-sr"><?php echo _x( 'Search', 'label', 'lccc-framework' ) ?></span>
+									<span class="screen-reader-text show-for-sr"><?php echo _x( '', 'label', 'lccc-framework' ) ?></span>
 									<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search', 'lccc-framework' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search', 'lccc-framework' ) ?>" />
 									<input type="hidden" name="searchblogs" value="<?php echo get_current_blog_id(); ?>" />
 								</label>
