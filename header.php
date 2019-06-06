@@ -27,7 +27,7 @@
 		
 		<?php get_template_part( 'template-parts/content', 'offcanvas' ); ?>
 		
-		<div role="button" tabindex="0" class="off-canvas-content" data-off-canvas-content>
+		<div class="off-canvas-content" data-off-canvas-content>
 			
 			<header id="masthead" class="header-bar grid-x grid-padding-x align-middle">
 				
