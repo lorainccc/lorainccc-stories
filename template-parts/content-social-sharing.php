@@ -63,7 +63,7 @@ if( $share_text && ( $twitter_icon || $facebook_icon || $linked_icon ) ) :
 
 								<li class="icon">
 
-									<a href="http://www.linkedin.com/shareArticle?mini=true&<?php the_permalink(); ?>" target="_blank">
+									<a href="https://www.linkedin.com/shareArticle?mini=true&<?php the_permalink(); ?>" target="_blank">
 
 										<img src="<?php echo $linkedin_icon['url']; ?>" alt="<?php echo $linkedin_icon['alt']; ?>" />
 
