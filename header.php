@@ -49,7 +49,7 @@
 
 					-->
 					
-					<div role="button" aria-label="Toggel Menu" tabindex="0" class="hamburger menu-icon">
+					<div role="button" aria-label="Toggle Menu" tabindex="0" class="hamburger menu-icon">
 						
 						<div class="top-bun"></div>
 						<div class="meat"></div>
