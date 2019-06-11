@@ -81,7 +81,7 @@ if( $posts ) :
 								
 								<div class="share-buttons">
 									
-									<ul class="menu">
+									<ul role="presentation" class="menu">
 
 										<?php if( $twitter_icon ) : ?>
 
@@ -89,7 +89,7 @@ if( $posts ) :
 
 											<a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank">
 
-												<img src="<?php echo $twitter_icon['url']; ?>" alt="<?php echo $twitter_icon['alt']; ?>" height="28" width="28" />
+												<img src="<?php echo $twitter_icon['url']; ?>" alt="Share this story on Twitter" height="28" width="28" />
 
 											</a>
 
@@ -101,9 +101,9 @@ if( $posts ) :
 
 										<li class="icon">
 
-											<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
+											<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
 
-												<img src="<?php echo $facebook_icon['url']; ?>" alt="<?php echo $facebook_icon['alt']; ?>" height="28" width="28" />
+												<img src="<?php echo $facebook_icon['url']; ?>" alt="Share this Story on Facebook" height="28" width="28" />
 
 											</a>
 
@@ -115,9 +115,9 @@ if( $posts ) :
 
 										<li class="icon">
 
-											<a href="http://www.linkedin.com/shareArticle?mini=true&<?php the_permalink(); ?>" target="_blank">
+											<a href="https://www.linkedin.com/shareArticle?mini=true&<?php the_permalink(); ?>" target="_blank">
 
-												<img src="<?php echo $linkedin_icon['url']; ?>" alt="<?php echo $linkedin_icon['alt']; ?>" height="28" width="28" />
+												<img src="<?php echo $linkedin_icon['url']; ?>" alt="Share this Story on LinkedIn" height="28" width="28" />
 
 											</a>
 
