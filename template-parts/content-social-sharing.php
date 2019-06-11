@@ -29,7 +29,7 @@ if( $share_text && ( $twitter_icon || $facebook_icon || $linked_icon ) ) :
 						
 						<div class="share-icons">
 				
-							<ul class="menu align-center">
+							<ul role="presentation" class="menu align-center">
 
 								<?php if( $twitter_icon ) : ?>
 
@@ -37,7 +37,7 @@ if( $share_text && ( $twitter_icon || $facebook_icon || $linked_icon ) ) :
 
 									<a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank">
 
-										<img src="<?php echo $twitter_icon['url']; ?>" alt="<?php echo $twitter_icon['alt']; ?>" />
+										<img src="<?php echo $twitter_icon['url']; ?>" alt="Share this story on twitter" />
 
 									</a>
 
@@ -51,7 +51,7 @@ if( $share_text && ( $twitter_icon || $facebook_icon || $linked_icon ) ) :
 
 									<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
 
-										<img src="<?php echo $facebook_icon['url']; ?>" alt="<?php echo $facebook_icon['alt']; ?>" />
+										<img src="<?php echo $facebook_icon['url']; ?>" alt="Share this story on Facebook" />
 
 									</a>
 
@@ -65,7 +65,7 @@ if( $share_text && ( $twitter_icon || $facebook_icon || $linked_icon ) ) :
 
 									<a href="https://www.linkedin.com/shareArticle?mini=true&<?php the_permalink(); ?>" target="_blank">
 
-										<img src="<?php echo $linkedin_icon['url']; ?>" alt="<?php echo $linkedin_icon['alt']; ?>" />
+										<img src="<?php echo $linkedin_icon['url']; ?>" alt="Share this story on LinkedIn" />
 
 									</a>
 
