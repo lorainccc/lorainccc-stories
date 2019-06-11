@@ -49,7 +49,7 @@ if( $share_text && ( $twitter_icon || $facebook_icon || $linked_icon ) ) :
 
 								<li class="icon">
 
-									<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
+									<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
 
 										<img src="<?php echo $facebook_icon['url']; ?>" alt="<?php echo $facebook_icon['alt']; ?>" />
 
