@@ -126,6 +126,8 @@ function lorainccc_stories_scripts() {
 	}
 	/* ----- End Foundation Support ----- */
 		
+	wp_enqueue_script( 'lc-campus-status-front', get_stylesheet_directory_uri() . '/js/lc-campus-status-front.js', array( 'jquery' ), '1', false );
+
 	wp_enqueue_style( 'lccc-stories-style', get_stylesheet_uri() );
  
  wp_enqueue_style( 'lccc-print-stories-style', get_stylesheet_directory_uri() . '/print.css', array(), '', 'print' );
