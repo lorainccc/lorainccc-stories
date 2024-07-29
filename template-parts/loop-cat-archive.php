@@ -10,7 +10,7 @@ $linkedin_icon = get_field('linkedin_icon', 'option');
 	
 	<div class="post-archive-item">
 
-		<a href="<?php the_permalink(); ?>">
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 			
 			<?php 
 			
