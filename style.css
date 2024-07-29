@@ -129,7 +129,7 @@ h1{color:#fff;font-size:6.25rem}h2{color:#0055a4;font-size:3.4375rem}body,p,a,sp
 .post-intro-wrapper::before{content:'';position:absolute;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);height:0;width:0;z-index:11}
 .post-intro-wrapper .post-date{font-family:"Source Serif Pro",serif;color:#ffc709;padding-bottom:1rem;border-bottom:2px solid #fff}
 .post-intro-wrapper .post-intro{padding-top:1.5rem;font-weight:300;color:#fff;line-height:120%}
-.story-categories{margin-bottom:3.125rem}.story-categories a,.story-categories a:visited{color:rgba(112,112,112,0.75);font-size:1rem;padding:.35rem .7rem;border:1px solid rgba(112,112,112,0.75);display:inline-block}
+.story-categories{margin-bottom:3.125rem}.story-categories a,.story-categories a:visited{color:rgba(0,44,101);font-size:1rem;padding:.35rem .7rem;border:1px solid rgba(0,44,101);display:inline-block}
 .flexible-layout-block{margin-bottom:3.75rem}.flexible-layout-block p{color:#4a4a4b}
 .flexible-layout-block.full-width-header-block{margin-bottom:7.5rem}.content-video-wrapper{position:relative}
 .content-video-wrapper .reveal-trigger{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;cursor:pointer}
