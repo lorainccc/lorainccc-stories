@@ -24,7 +24,7 @@ endif;
 		
 		<div class="featured-image-container show-for-medium" data-equalizer-watch>
 	
-			<a href="<?php the_permalink(); ?>">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 
 				<div class="featured-image-container-inner" style="background-image: url(<?php echo $featured_image; ?>);"></div>
 
